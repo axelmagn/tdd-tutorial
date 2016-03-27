@@ -26,7 +26,6 @@ class NewVisitorTest(FunctionalTest):
         # tying fly-fishing lures
         inputbox.send_keys('Buy peacock feathers')
 
-
         # when she hits enter the page updates ,and now the page lists "1: Buy
         # peacock feathers" as an item in a to-do list.
         inputbox.send_keys(Keys.ENTER)
@@ -57,7 +56,7 @@ class NewVisitorTest(FunctionalTest):
 
         # Francis starts a new list by entering a new item.  He is less
         # interesting than Edith...
-        inputbox = self.browser.find_element_by_id("id_new_item")
+        inputbox = self.get_item_input_box()
         inputbox.send_keys('Buy milk')
         inputbox.send_keys(Keys.ENTER)
 
